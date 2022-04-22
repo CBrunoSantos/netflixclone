@@ -4,6 +4,7 @@ import MovieRow from './components/MovieRow';
 import FeatureMovie from './components/FeatureMovie';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import loader from './../src/loeader.gif'
 import './App.css';
 
 export default()=>{
@@ -61,8 +62,12 @@ export default()=>{
           <MovieRow key={key} title={item.title} items={item.items}/>
         ))}
       </section>
-
       <Footer/>
+      {moveList.length <= 0 && 
+      <div className="loader">
+        <img src={loader}/>
+      </div>
+      }
     </div>
   );
 }

@@ -38,3 +38,9 @@ header.black{
     height: 100%;
     border-radius:3px;
 }
+
+@media (max-width:1600px){
+    header h4{
+        opacity:0;
+    }
+}
